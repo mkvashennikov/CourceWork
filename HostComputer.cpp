@@ -1,4 +1,4 @@
-#include "HostComputer.h"
+ï»¿#include "HostComputer.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -49,19 +49,19 @@ HostComputer::HostComputer(const HostComputer& comp) {
     ConnectedCount = comp.ConnectedCount;
 }
 void HostComputer::PrintAllInformation() {
-    cout << "Íàçâàíèå êîìïüþòåðà: " << Name << endl;
-    cout << "Ïðîèçâîäèòåëü êîìïüþòåðà: " << Manufacturer << endl;
-    cout << "Ìîäåëü ïðîöåññîðà: " << ModelCPU << endl;
-    cout << "Ìîäåëü ìàòåðèíñêîé ïëàòû: " << MotherboardModel << endl;
-    cout << "Îïåðàöèîííàÿ ñèñòåìà: " << OS << endl;
-    cout << "Êîëè÷åñòâî æ¸ñòêèõ äèñêîâ: " << HardDriveCount << endl;
-    cout << "Îáú¸ì îïåðàòèâíîé ïàìÿòè (Ãá): " << RAM << endl;
-    cout << "Ìîùíîñòü áëîêà ïèòàíèÿ: " << PowerSupplyCapacity << endl;
-    cout << "Ñòîèìîñòü: " << Price << endl;
-    cout << "Îöåíêà ïðîèçâîäèòåëüíîñòè: " << PerformanceScore << endl;
-    cout << "IP-àäðåñ êîìïüþòåðà: " << IP << endl;
-    cout << "Ïðîòîêîë ñîåäèíåíèÿ: " << Protocol << endl;
-    cout << "Êîëè÷åñòâî ïîäêëþ÷åííûõ óñòðîéñòâ: " << ConnectedCount << endl;
+    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð°: " << Name << endl;
+    cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð°: " << Manufacturer << endl;
+    cout << "ÐœÐ¾Ð´ÐµÐ»ÑŒ Ð¿Ñ€Ð¾Ñ†ÐµÑÑÐ¾Ñ€Ð°: " << ModelCPU << endl;
+    cout << "ÐœÐ¾Ð´ÐµÐ»ÑŒ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð½ÑÐºÐ¾Ð¹ Ð¿Ð»Ð°Ñ‚Ñ‹: " << MotherboardModel << endl;
+    cout << "ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ð¾Ð½Ð½Ð°Ñ ÑÐ¸ÑÑ‚ÐµÐ¼Ð°: " << OS << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¶Ñ‘ÑÑ‚ÐºÐ¸Ñ… Ð´Ð¸ÑÐºÐ¾Ð²: " << HardDriveCount << endl;
+    cout << "ÐžÐ±ÑŠÑ‘Ð¼ Ð¾Ð¿ÐµÑ€Ð°Ñ‚Ð¸Ð²Ð½Ð¾Ð¹ Ð¿Ð°Ð¼ÑÑ‚Ð¸ (Ð“Ð±): " << RAM << endl;
+    cout << "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ Ð±Ð»Ð¾ÐºÐ° Ð¿Ð¸Ñ‚Ð°Ð½Ð¸Ñ: " << PowerSupplyCapacity << endl;
+    cout << "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ: " << Price << endl;
+    cout << "ÐžÑ†ÐµÐ½ÐºÐ° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: " << PerformanceScore << endl;
+    cout << "IP-Ð°Ð´Ñ€ÐµÑ ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð°: " << IP << endl;
+    cout << "ÐŸÑ€Ð¾Ñ‚Ð¾ÐºÐ¾Ð» ÑÐ¾ÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ñ: " << Protocol << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð½Ñ‹Ñ… ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²: " << ConnectedCount << endl;
 }
 HostComputer& HostComputer::operator=(const HostComputer& comp) {
     delete[] Name;

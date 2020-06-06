@@ -1,6 +1,5 @@
-#pragma once
+п»ї#pragma once
 #include <algorithm>
-#include "Computer.h"
 
 template<class T>
 class Vector {
@@ -8,8 +7,8 @@ public:
     Vector();
     Vector(int size);
     Vector(const Vector<T>& other);
-    void Insert(int n, T& element);
-    void PushBack(T& element);
+    void Insert(int n, T&& element);
+    void PushBack(T&& element);
     void Erase(int n);
     T& operator[](int n);
     int Length() const;
@@ -41,8 +40,8 @@ Vector<T>::Vector(const Vector<T>& other) {
     Mas = new T[Size];
 }
 template<class T>
-void Vector<T>::Insert(int n, T& element) {
-    if (n < 0 || n > Size) throw Exception("Указан неверный элемент для вставки!");
+void Vector<T>::Insert(int n, T&& element) {
+    if (n < 0 || n > Size) throw Exception("РЈРєР°Р·Р°РЅ РЅРµРІРµСЂРЅС‹Р№ СЌР»РµРјРµРЅС‚ РґР»СЏ РІСЃС‚Р°РІРєРё!");
     T* temp = new T[Size + 1];
     for (int i = 0; i < n; i++) {
         temp[i] = Mas[i];
@@ -56,7 +55,7 @@ void Vector<T>::Insert(int n, T& element) {
     Size++;
 }
 template<class T>
-void Vector<T>::PushBack(T& element) {
+void Vector<T>::PushBack(T&& element) {
     T* temp = new T[Size + 1];
     for (int i = 0; i < Size; i++) {
         temp[i] = Mas[i];
@@ -68,7 +67,7 @@ void Vector<T>::PushBack(T& element) {
 }
 template<class T>
 void Vector<T>::Erase(int n) {
-    if (n < 0 || n > Size - 1) throw Exception("Вы попытались стереть несуществующий элемент!");
+    if (n < 0 || n > Size - 1) throw Exception("Р’С‹ РїРѕРїС‹С‚Р°Р»РёСЃСЊ СЃС‚РµСЂРµС‚СЊ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ СЌР»РµРјРµРЅС‚!");
     T* temp = new T[Size - 1];
     for (int i = 0; i < n; i++) {
         temp[i] = Mas[i];
@@ -83,7 +82,7 @@ void Vector<T>::Erase(int n) {
 }
 template<class T>
 T& Vector<T>::operator[](int n) {
-    if (n < 0 || n > Size - 1) throw Exception("Произошёл выход за пределы массива!");
+    if (n < 0 || n > Size - 1) throw Exception("РџСЂРѕРёР·РѕС€С‘Р» РІС‹С…РѕРґ Р·Р° РїСЂРµРґРµР»С‹ РјР°СЃСЃРёРІР°!");
     return Mas[n];
 }
 template<class T>
@@ -98,7 +97,7 @@ void Vector<T>::Clear() {
 }
 template<class T>
 void Vector<T>::Sort() {
-    if (Size == 0) throw Exception("Нечего сортировать!");
+    if (Size == 0) throw Exception("РќРµС‡РµРіРѕ СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ!");
     int step = Size / 2;
     while (step > 0) {
         for (int i = 0; i < Size - step; i++) {
@@ -113,7 +112,7 @@ void Vector<T>::Sort() {
 }
 template<class T>
 void Vector<T>::ComparableSort(bool(*cmp)(const T& a,const T& b)) {
-    if (Size == 0) throw Exception("Нечего сортировать!");
+    if (Size == 0) throw Exception("РќРµС‡РµРіРѕ СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ!");
     int step = Size / 2;
     while (step > 0) {
         for (int i = 0; i < Size - step; i++) {
@@ -137,7 +136,7 @@ template <class T> template<class C>
 Vector<T>* Vector<T>::Search(C min, C max, bool(*finder)(C min, C max, const T& comp)) {
     Vector<T>* temporary = new Vector<T>();
     for (int i = 0; i < Size; i++) {
-        if (FinderAllByPrice(min,max, Mas[i])) temporary->PushBack(Mas[i]);
+        if (FinderAllByPrice(min,max, Mas[i])) temporary->PushBack(const_cast<const T>(Mas[i]));
     }
     if (temporary->Size == 0) return nullptr;
     return temporary;

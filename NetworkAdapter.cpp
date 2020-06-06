@@ -1,4 +1,4 @@
-#include "NetworkAdapter.h"
+ï»¿#include "NetworkAdapter.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -37,17 +37,17 @@ NetworkAdapter::NetworkAdapter(const NetworkAdapter& na) {
     NetworkMedia = na.NetworkMedia;
 }
 void NetworkAdapter::PrintAllInformation() {
-    cout << "Íàçâàíèå óñòðîéñòâà: " << Name << endl;
-    cout << "Ïðîèçâîäèòåëü óñòðîéñòâà: " << Manufacturer << endl;
-    cout << "Êîëè÷åñòâî ïîäêëþ÷åííûõ óñòðîéñòâ: " << ConnectedDeviceCount << endl;
-    cout << "Ñòîèìîñòü: " << Price << endl;
-    cout << "Òèï: " << Type << endl;
-    cout << "Ïðîòîêîë Wi-Fi: " << WiFiProtocol << endl;
-    cout << "Èíòåðôåéñ ïîäêëþ÷åíèÿ: " << InterfaceConnect << endl;
-    cout << "Mac-àäðåñ: " << MACAdress << endl;
-    cout << "Ñêîðîñòü: " << Speed << endl;
-    cout << "Êîëè÷åñòâî àíòåíí: " << CountAntennas << endl;
-    cout << "Ñåòåâûå ìåäèà-óñòðîéñòâà: " << NetworkMedia << endl;
+    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°: " << Name << endl;
+    cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°: " << Manufacturer << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð½Ñ‹Ñ… ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²: " << ConnectedDeviceCount << endl;
+    cout << "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ: " << Price << endl;
+    cout << "Ð¢Ð¸Ð¿: " << Type << endl;
+    cout << "ÐŸÑ€Ð¾Ñ‚Ð¾ÐºÐ¾Ð» Wi-Fi: " << WiFiProtocol << endl;
+    cout << "Ð˜Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹Ñ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ñ: " << InterfaceConnect << endl;
+    cout << "Mac-Ð°Ð´Ñ€ÐµÑ: " << MACAdress << endl;
+    cout << "Ð¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ: " << Speed << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð°Ð½Ñ‚ÐµÐ½Ð½: " << CountAntennas << endl;
+    cout << "Ð¡ÐµÑ‚ÐµÐ²Ñ‹Ðµ Ð¼ÐµÐ´Ð¸Ð°-ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°: " << NetworkMedia << endl;
 }
 void NetworkAdapter::SetType(char* tp) {
     delete[] Type;

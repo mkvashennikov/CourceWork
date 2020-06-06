@@ -1,4 +1,4 @@
-#include "NetworkPrinter.h"
+ï»¿#include "NetworkPrinter.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -49,19 +49,19 @@ NetworkPrinter::NetworkPrinter(const NetworkPrinter& np) {
     PaperCapacity = np.PaperCapacity;
 }
 void NetworkPrinter::PrintAllInformation() {
-    cout << "Íàçâàíèå óñòðîéñòâà: " << Name << endl;
-    cout << "Ïðîèçâîäèòåëü óñòðîéñòâà: " << Manufacturer << endl;
-    cout << "Êîëè÷åñòâî ïîäêëþ÷åííûõ óñòðîéñòâ: " << ConnectedDeviceCount << endl;
-    cout << "Ñòîèìîñòü: " << Price << endl;
-    cout << "Öâåòíîé: " << ColoredType << endl;
-    cout << "Ìàêñèìàëüíîå ðàçðåøåíèå: " << MaxResolution << endl;
-    cout << "Ìàêñèìàëüíûé ðàçìåð ëèñòà: " << MaxPaperSize << endl;
-    cout << "Ïîääåðæêà Windows: " << WindowsSupport << endl;
-    cout << "Öâåò ïðèíòåðà: " << Color << endl;
-    cout << "Ñêîðîñòü ïå÷àòè: " << PrintSpeed << endl;
-    cout << "Ïîääåðæêà Wi-Fi: " << WiFiSupport << endl;
-    cout << "Íàëè÷èå Bluetooth ìîäóëÿ: " << BluetoothModule << endl;
-    cout << "Âìåñòèìîñòü ëèñòîâ: " << PaperCapacity << endl;
+    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°: " << Name << endl;
+    cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°: " << Manufacturer << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð½Ñ‹Ñ… ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²: " << ConnectedDeviceCount << endl;
+    cout << "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ: " << Price << endl;
+    cout << "Ð¦Ð²ÐµÑ‚Ð½Ð¾Ð¹: " << ColoredType << endl;
+    cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ñ€Ð°Ð·Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ: " << MaxResolution << endl;
+    cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð»Ð¸ÑÑ‚Ð°: " << MaxPaperSize << endl;
+    cout << "ÐŸÐ¾Ð´Ð´ÐµÑ€Ð¶ÐºÐ° Windows: " << WindowsSupport << endl;
+    cout << "Ð¦Ð²ÐµÑ‚ Ð¿Ñ€Ð¸Ð½Ñ‚ÐµÑ€Ð°: " << Color << endl;
+    cout << "Ð¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ð¿ÐµÑ‡Ð°Ñ‚Ð¸: " << PrintSpeed << endl;
+    cout << "ÐŸÐ¾Ð´Ð´ÐµÑ€Ð¶ÐºÐ° Wi-Fi: " << WiFiSupport << endl;
+    cout << "ÐÐ°Ð»Ð¸Ñ‡Ð¸Ðµ Bluetooth Ð¼Ð¾Ð´ÑƒÐ»Ñ: " << BluetoothModule << endl;
+    cout << "Ð’Ð¼ÐµÑÑ‚Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð»Ð¸ÑÑ‚Ð¾Ð²: " << PaperCapacity << endl;
 }
 void NetworkPrinter::SetColorType(bool ct) {
     ColoredType = ct;

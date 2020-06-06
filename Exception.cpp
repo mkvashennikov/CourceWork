@@ -1,9 +1,9 @@
-#include "Exception.h"
+п»ї#include "Exception.h"
 #include <iostream>
 
 Exception::Exception() {
 	Msg = new char[40];
-	strcpy(Msg,"Произошло исключение неопознанного типа");
+	strcpy(Msg,"РџСЂРѕРёР·РѕС€Р»Рѕ РёСЃРєР»СЋС‡РµРЅРёРµ РЅРµРѕРїРѕР·РЅР°РЅРЅРѕРіРѕ С‚РёРїР°");
 }
 Exception::Exception(const char* msg) {
 	Msg = new char[strlen(msg)+1];

@@ -1,4 +1,4 @@
-#include "NetworkDevice.h"
+ï»¿#include "NetworkDevice.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -21,10 +21,10 @@ NetworkDevice::NetworkDevice(const NetworkDevice& nd) {
     Price = nd.Price;
 }
 void NetworkDevice::PrintAllInformation() {
-    cout << "Íàçâàíèå óñòðîéñòâà: " << Name << endl;
-    cout << "Ïðîèçâîäèòåëü óñòðîéñòâà: " << Manufacturer << endl;
-    cout << "Êîëè÷åñòâî ïîäêëþ÷åííûõ óñòðîéñòâ: " << ConnectedDeviceCount << endl;
-    cout << "Ñòîèìîñòü: " << Price << endl;
+    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°: " << Name << endl;
+    cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°: " << Manufacturer << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð½Ñ‹Ñ… ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²: " << ConnectedDeviceCount << endl;
+    cout << "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ: " << Price << endl;
 }
 double NetworkDevice::GetPrice() const {
     return Price;
